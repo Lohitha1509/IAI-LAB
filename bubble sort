@@ -1,0 +1,46 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class bsort
+{
+public:
+    int a[10000],n,key;
+    void getdata();
+void sort()
+{
+    int i,j=0,temp=0,num=0;
+    for(i=0;i<n-1;i++)
+    {
+        for(j=0;j<n-1-i;j++)
+        {
+            num++;
+            if(a[j+1]<a[j])
+            {
+            temp=a[j];
+            a[j]=a[j+1];
+            a[j+1]=temp;
+            }
+        }
+    }
+    cout<<"no of basic op is"<<num<<"\n";
+    cout<<"sorted array is ";
+    for(int i=0;i<n;i++)
+    {
+        cout<<a[i]<<"\t";
+    }
+}
+}t;
+
+int main()
+{
+    cout<<"enter the length of array";
+    cin>>t.n;
+    cout<<"enter the array elements";
+    for(int i=0;i<t.n;i++)
+    {
+        t.a[i]=rand()%10000;
+    }
+    t.sort();
+    getch();
+}
+
